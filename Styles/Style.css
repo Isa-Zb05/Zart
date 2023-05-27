@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: "serif", "roboto";
+}
+
+.respmenu ul {
+    margin: 5px;
+}
+
+.respmenu a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid violet;
+    max-width: 200px;
+    background: #FFCCFF;
+    font-variant: small-caps;
+}
+
+.respmenu input[type="checkbox"]    ,
+.respmenu .fa-bars,
+.respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.respmenu .fa-bars,
+.respmenu .fa-times {
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+    opacity: 0;
+}
+
+.respmenu {
+    color: black;
+    position: relative;
+    background: floralwhite;
+    min-height: 20px;
+}
+
+.respmenu nav {
+    display: none;
+}
+
+.respmenu input:checked~nav {
+    display: block;
+}
+
+.respmenu input:checked~.fa-bars {
+    display: none;
+}
+
+.respmenu input:checked~ .barraDeBusquedaresp {
+    display: none;
+}
+
+.respmenu input:not(:checked)~.fa-times {
+    display: none;
+}
+
+.barraDeBusquedaresp input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.container {
+    display: none;
+}
+
+.barraDeBusqueda {
+    position: relative;
+    margin: 0
+}
+
+.barraDeBusqueda input {
+    height: 20%;
+    border-radius: 2px;
+    border: gray;
+    margin: 0px 0px 20px;
+}
+
+.barraDeBusqueda i {
+    position: absolute;
+    padding: 0px 2px 0px;
+    color: black;
+    text-decoration: none;
+}
+
+.navButton {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.navButton button {
+    background-color: unset;
+    border: none;
+    margin: 0px 5px;
+}
+
+.navButton i {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.navButton a {
+    text-decoration: none;
+    color: black;
+}
+
+.texto h1 {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 50px;
+}
+
+.videoPromo {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.videoPromo video {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+#novedades {
+    position: relative;
+    top: -100px;
+
+}
+
+.producNovedosos h2 {
+    position: relative;
+    top: 40px;
+    text-align: center;
+    font-size: 25px;
+    margin: 90px;
+}
+
+.imagenDeOfertas {
+    padding: auto;
+    width: 120%;
+    height: 720px;
+}
+
+.videoRopa {
+    position: relative;
+    top: -100;
+    margin: 10x 0px 0px;
+    width: 100%;
+    height: 720;
+
+}
+
+#tips {
+    position: relative;
+    top: 80px;
+}
+
+.textTips h2 {
+    position: relative;
+    top: -50px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.imagenesTips {
+    padding: auto;
+    width: 120%;
+    height: 720px;
+}
+
+.bottonUltimate {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    width: 35%;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.bottonUltimate button {
+    background-color: unset;
+    border: none;
+    margin: 5px 8px;
+}
+
+.bottonUltimate i {
+    margin-left: 5px;
+    font-size: 23px;
+    color: darkviolet;
+}
+
+.footer {
+    position: relative;
+    top: 100px;
+    display: flex;
+    margin: 20px 10px;
+
+}
+
+.footerPrincipal {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 110px;
+    padding: 0.8em;
+    margin: 50px 0px 0px;
+    background-color: violet;
+
+}
+
+.footerDos {
+    font-size: 19px;
+    color: black;
+}
+
+.footerTres {
+    font-size: 19px;
+    color: black;
+}
+
+.footerCuatro {
+    font-size: 19px;
+    color: black;
+}
+
+.footerCinco {
+    font-size: 23px;
+    color: black;
+}
+
+.footerCinco i {
+    margin-left: 5px;
+    font-size: 19px;
+}
+
+/* Media Query 480px */
+
+    @media(min-width:480px){ 
+
+        .container {
+            display: block;
+        }
+
+        .respmenu{
+            display: none;
+        }
+
+        .container {
+            background-color: floralwhite;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .headerContainer {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0px 10px 0px;
+            width: 100%;
+            justify-content: space-between;
+        }
+        
+        #logo {
+            width: 25%;
+        
+        }
+        
+        .barraDeBusqueda {
+            position: relative;
+            margin: auto;
+        }
+        
+        .barraDeBusqueda input {
+            height: 30%;
+            border-radius: 2px;
+            border: gray;
+            width: 100%;
+        }
+        
+        .barraDeBusqueda i {
+            position: absolute;
+            padding: 0px 2px 0px;
+            color: black;
+            text-decoration: none;
+        }
+        
+        .barraDeBusqueda ::placeholder {
+            max-width: 75%;
+            font-size: 14px;
+            padding-left: 3%;
+        }
+        
+        a:hover {
+            color: blue;
+            cursor: pointer;
+            transition: color 3s;
+        
+        
+        }
+        
+        .slogan {
+            width: 30%;
+            font-size: 15px;
+            text-align: center;
+            margin: auto;
+            color: deeppink;
+        }
+        .texto h1 {
+            font-size: 25px;
+    
+        }
+        .producNovedosos h2 {
+
+            font-size: 25px;
+
+        }
+        
+        .videoPromo {
+            width: 100%;
+            height: 330px;
+
+        }
+        
+        .imagenDeOfertas {
+            width: 120%;
+            height: 500px;
+        }
+        
+        .videoRopa {
+
+            width: 100%;
+            height: 400;
+        
+        }
+        
+        
+        .imagenesTips {
+            padding: auto;
+            width: 100%;
+            height: 230px;
+        }
+        
+
+}
+
+/* Media Query 768px */
+
+@media(min-width:768px){
+    .texto h1 {
+        font-size: 28px;
+
+    }
+    
+    .videoPromo {
+        width: 100%;
+        height: 600px;
+
+    }
+    
+    
+    .producNovedosos h2 {
+
+        font-size: 30px;
+        margin: 90px;
+    }
+    
+    .imagenDeOfertas {
+
+        width: 120%;
+        height: 720px;
+    }
+    
+    .videoRopa {
+
+        width: 100%;
+        height: 720;
+    
+    }
+    
+    
+    .textTips h2 {
+
+        font-size: 25px;
+    }
+    
+    .imagenesTips {
+
+        width: 120%;
+        height: 720px;
+    }
+
+}
+
+/* Media Query 1024x */
+
+@media(min-width:1024px){
+    .container {
+        display: block;
+    }
+
+    .respmenu{
+        display: none;
+    }
+
+    .container {
+        background-color: floralwhite;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .headerContainer {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 10px 0px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    #logo {
+        width: 25%;
+    
+    }
+    
+    .barraDeBusqueda {
+        position: relative;
+        margin: auto;
+    }
+    
+    .barraDeBusqueda input {
+        height: 30%;
+        border-radius: 2px;
+        border: gray;
+        width: 100%;
+    }
+    
+    .barraDeBusqueda i {
+        position: absolute;
+        padding: 0px 2px 0px;
+        color: black;
+        text-decoration: none;
+    }
+    
+    .barraDeBusqueda ::placeholder {
+        max-width: 75%;
+        font-size: 14px;
+        padding-left: 3%;
+    }
+    
+
+    
+    .slogan {
+        font-size: 25px;
+    }
+    .texto h1 {
+        font-size: 25px;
+        text-align: center;
+        margin: 10px 50px;
+    }
+    
+    .videoPromo {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    
+    #novedades {
+        position: relative;
+        top: -100px;
+    
+    }
+    
+    .producNovedosos h2 {
+        position: relative;
+        top: 40px;
+        text-align: center;
+        font-size: 25px;
+        margin: 90px;
+    }
+    
+    .imagenDeOfertas {
+        padding: auto;
+        width: 120%;
+        height: 720px;
+    }
+    
+    .videoRopa {
+        position: relative;
+        top: -100;
+        margin: 10x 0px 0px;
+        width: 100%;
+        height: 720;
+    
+    }
+    
+    #tips {
+        position: relative;
+        top: 80px;
+    }
+    
+    .textTips h2 {
+        position: relative;
+        top: -50px;
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .imagenesTips {
+        padding: auto;
+        width: 120%;
+        height: 720px;
+    }
+}
